@@ -11,7 +11,7 @@ $query="SELECT * FROM `login` WHERE username = '$username' and Password = '$pass
 	$result = mysqli_query($con,$query) or die(mysql_error());
 	$rows = mysqli_num_rows($result);
         if($rows==1){
-	    $_SESSION['Username'] = $username;
+	    $_SESSION['username'] = $username;
 	    header("Location: index.php");
          }
          else{
